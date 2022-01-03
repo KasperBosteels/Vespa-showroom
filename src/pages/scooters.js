@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 const artistPage = ({
   data: {
@@ -13,7 +13,9 @@ const artistPage = ({
         const scooter = item.node.scooterFields
         return (
           <div>
-            <p key={item.node.id}>{scooter.name}</p>
+            <Link to={`/scooters/${item.node.slug}`}>
+              <p key={item.node.id}>{scooter.name}</p>
+            </Link>
             <p>{scooter.description}</p>
           </div>
         )
@@ -31,6 +33,7 @@ export const query = graphql`
             name
             description
           }
+          slug
         }
       }
     }
