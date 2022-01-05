@@ -1,14 +1,21 @@
 import * as React from "react"
 import Layout from "../../components/layout"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 const ScooterPage = ({
   data: {
     wpScooter: { scooterFields },
   },
 }) => {
+  const scooterimage = getImage(scooterFields.pictures.picture1.localFile)
+  const altText = scooterFields.pictures.picture1.altText
   return (
     <Layout pageTitle={scooterFields.name}>
-      <p>{scooterFields.description}</p>
+      <div>
+        <GatsbyImage image={scooterimage} alt={altText} />
+        <p>{scooterFields.description}</p>
+      </div>
       <div>
         <h3>specificaties</h3>
         <p>cylinder inhoud: {scooterFields.cc}</p>
@@ -32,6 +39,16 @@ export const query = graphql`
         kmperliter
         name
         wheelswidth
+        pictures {
+          picture1 {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            altText
+          }
+        }
       }
     }
   }
