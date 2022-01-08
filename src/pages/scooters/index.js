@@ -2,36 +2,26 @@ import * as React from "react"
 import Layout from "../../components/layout"
 import { graphql } from "gatsby"
 import Scooter from "../../components/scooterspagemodule"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { getImage } from "gatsby-plugin-image"
 import {
-  headerimage,
   scooterobject,
+  container,
 } from "../../components/headerScootersPage.module.css"
 const artistPage = ({
   data: {
     allWpScooter: { edges },
-    wpPage: { scootersPageFields },
   },
 }) => {
-  const headerImage = getImage(
-    scootersPageFields.headerScooters.picture.localFile
-  )
-  const headerImageAlt = scootersPageFields.headerScooters.picture.altText
   return (
     <Layout pageTitle="Vespa Scooters">
-      <GatsbyImage
-        className={headerimage}
-        image={headerImage}
-        alt={headerImageAlt}
-      />
-      <div className={scooterobject}>
-        {edges.map(item => {
-          const scooter = item.node
-          return (
-            <Scooter key={scooter.id} slug={scooter.slug} scooter={scooter} />
-          )
-        })}
+      <div className={container}>
+        <div className={scooterobject}>
+          {edges.map(item => {
+            const scooter = item.node
+            return (
+              <Scooter key={scooter.id} slug={scooter.slug} scooter={scooter} />
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )
@@ -42,17 +32,6 @@ export const query = graphql`
       scootersPageFields {
         headerScooters {
           description
-          picture {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  placeholder: BLURRED
-                  quality: 100
-                  layout: FULL_WIDTH
-                )
-              }
-            }
-          }
         }
       }
     }
