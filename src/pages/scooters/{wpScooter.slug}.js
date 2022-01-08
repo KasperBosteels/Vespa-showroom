@@ -50,6 +50,11 @@ export const query = graphql`
           }
         }
       }
+      colors {
+        nodes {
+          name
+        }
+      }
     }
   }
 `
