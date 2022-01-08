@@ -8,20 +8,23 @@ import {
   headerInfo,
   headerPicture,
   headerTitle,
+  scooterscontent,
   scooters,
+  featuredInfo,
 } from "../components/page.module.css"
 const IndexPage = ({
   data: {
     wpPage: { homePageFields },
   },
 }) => {
-  const scooterimage = getImage(homePageFields.bannerImage.localFile)
+  const scooterImage = getImage(homePageFields.bannerImage.localFile)
+  const scooterImageAlt = homePageFields.bannerImage.altText
   const featuredscooters = homePageFields.featuredVespa
   return (
     <Layout>
       <div className={header}>
         <div className={headerInfo}>
-          <h1 className={headerTitle}>{homePageFields.title}</h1>
+          <h1 className={headerTitle}>{scooterImageAlt}</h1>
           <div
             dangerouslySetInnerHTML={{
               __html: homePageFields.shortDescription,
@@ -31,14 +34,16 @@ const IndexPage = ({
         <div>
           <GatsbyImage
             className={headerPicture}
-            image={scooterimage}
+            image={scooterImage}
             alt={homePageFields.bannerImage.altText}
           />
         </div>
       </div>
-      <div>
-        <h2>{featuredscooters.title}</h2>
-        <p>{featuredscooters.description}</p>
+      <div className={scooterscontent}>
+        <div className={featuredInfo}>
+          <h2>{featuredscooters.title}</h2>
+          <p>{featuredscooters.description}</p>
+        </div>
         <div className={scooters}>
           {featuredscooters.scooter.map(scooter => {
             return (
