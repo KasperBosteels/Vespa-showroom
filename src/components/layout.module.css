@@ -1,6 +1,6 @@
 .container {
   width: 90%;
-  max-width: 1080px;
+  max-width: 1300px;
   margin: auto;
   font-family: sans-serif;
 }
@@ -10,7 +10,6 @@ html {
   font: 112, 5%/1.45rem sans-serif, georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
-  background-color: white;
 }
 .body {
   overflow: hidden;
@@ -34,7 +33,7 @@ html {
 .nav-link {
   display: flex;
   align-items: center;
-  height: 90px;
+  height: fit-content;
 }
 .nav-link-text {
   color: black;
@@ -42,31 +41,24 @@ html {
   text-decoration: none;
   font-weight: 600;
 }
-
+.menubar {
+  background-color: rgba(0, 0, 0, 0.247);
+}
 .nav-link-text:hover {
-  color: crimson;
+  color: green;
 }
 .site-title {
   position: relative;
   display: flex;
   align-items: center;
-  height: 90px;
+  height: fit-content;
+  padding-top: 20px;
   flex-shrink: 0;
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 600;
   margin-right: auto;
   color: black;
-}
-.site-title::after {
-  content: ".";
-  position: absolute;
-  right: 0px;
-  bottom: 35px;
-  font-size: 2rem;
-  font-family: serif;
-  color: green;
-  margin-right: auto;
 }
 .nav-link-item {
   padding-left: 2rem;

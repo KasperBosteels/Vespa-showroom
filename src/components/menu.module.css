@@ -1,0 +1,33 @@
+.menubar {
+  box-shadow: 5px 10px 8px #888888;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 25px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.menubar header {
+  font-size: 3rem;
+}
+.nav ul {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.navLinkText {
+  padding: 5px;
+  margin: auto;
+  text-decoration: none;
+}
+.navLinkText :hover {
+  transition: all 0.5s ease;
+  color: green;
+}
+.listItem {
+  float: left;
+  padding-left: 15px;
+}
+.listItem .Link {
+  font-size: 2rem;
+  display: block;
+}
