@@ -12,7 +12,7 @@ const Menu = ({ title }) => {
               Home
             </Link>
           </li>
-          <li>
+          <li className={listItem}>
             <Link to="/scooters" className={navLinkText}>
               Scooters
             </Link>
