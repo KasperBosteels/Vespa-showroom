@@ -3,7 +3,7 @@ import { mainFooter } from "./footer.module.css"
 const Footer = ({ title }) => {
   return (
     <footer className={mainFooter}>
-      <p>{title}</p>
+      <p>{title} | All Rights Reserved</p>
     </footer>
   )
 }
