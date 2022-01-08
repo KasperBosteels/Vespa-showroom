@@ -1,0 +1,78 @@
+.wrapper {
+  display: flex;
+  position: relative;
+  height: 28vw;
+  max-height: 350px;
+  margin: auto;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 25px;
+  border: rgba(0, 0, 0, 0.055) 3px solid;
+}
+.wrapper:hover {
+  transition: all 1s ease;
+  border: rgba(0, 0, 0, 0.329) 3px solid;
+  box-shadow: 5px 10px 8px #888888;
+}
+.wrapper:hover .image {
+  transition: all 1s ease;
+  border: rgba(0, 0, 0, 0.329) 3px solid;
+  border-radius: 45%;
+}
+.image {
+  width: 320px;
+  height: 320px;
+  margin: 10px;
+  border-radius: 50%;
+  border: rgba(0, 0, 0, 0.055) 3px solid;
+}
+.scootertext {
+  color: black;
+  display: block;
+  text-align: center;
+  max-width: 500px;
+  text-decoration: none;
+}
+.scootername {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.scooterdescription {
+  color: black;
+  text-decoration: none;
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+  .wrapper {
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 840px) {
+  .scootertext .scooterdescription {
+    opacity: 0;
+    content: none;
+  }
+  .scootertext .scootername {
+    width: fit-content;
+  }
+  .wrapper {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 260px;
+  }
+  .wrapper .image {
+    width: 250px;
+    height: 250px;
+  }
+  .wrapper .scootername {
+    display: block;
+    width: 200px;
+  }
+}
