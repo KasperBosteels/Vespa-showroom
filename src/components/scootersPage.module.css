@@ -9,6 +9,8 @@
   border-radius: 25px;
   border: rgba(0, 0, 0, 0.055) 3px solid;
   text-decoration: none;
+  min-width: fit-content;
+  width: 80%;
 }
 .wrapper:hover {
   transition: all 1s ease;
