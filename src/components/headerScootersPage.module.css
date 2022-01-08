@@ -1,0 +1,33 @@
+.headerimage {
+  width: 25vw;
+  height: 250px;
+  transform: translateX(calc((-25vw + 1080px) / 2));
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.scooterobject {
+  background-color: rgba(0, 0, 0, 0);
+}
+@media screen and (max-width: 1300px) {
+  .headerimage {
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    width: 50%;
+    height: 50%;
+    transform: translateX(calc((-50% + 1300) / 2));
+  }
+}
+@media screen and (max-width: 1000px) {
+  .headerimage {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 250px;
+    height: 125px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .scooterobject {
+    display: block;
+    float: left;
+  }
+}
