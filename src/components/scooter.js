@@ -16,7 +16,7 @@ export const Scooter = ({ scooter, slug }) => {
       />
       <div className={scootertext}>
         {scooter.scooterFields.name && (
-          <p className={scootername}>{scooter.scooterFields.name}</p>
+          <h2 className={scootername}>{scooter.scooterFields.name}</h2>
         )}
       </div>
     </Link>
