@@ -1,0 +1,37 @@
+.imagecontainer {
+  padding-top: 50px;
+  margin-top: 50px;
+  max-height: 300px;
+}
+.image {
+  max-height: 300px;
+  width: fit-content;
+  border: black;
+}
+.specificationstable {
+  background-color: rgba(0, 0, 0, 0.603);
+  border-radius: 10px;
+}
+.colorsTable {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.colorsTable tr {
+  padding-left: 2px;
+}
+.colorsTable tr td {
+  font-size: 1rem;
+  margin-left: 1px;
+  padding: 0;
+  float: left;
+}
+.colorsTable tr td:hover {
+  transition: all 0.5s ease;
+  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+.colorOrb {
+  font-size: large;
+}
