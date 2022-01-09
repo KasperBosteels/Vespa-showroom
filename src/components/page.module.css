@@ -51,3 +51,30 @@
   padding-left: 100;
   padding-top: 100px;
 }
+@media screen and (max-width: 1060px) {
+  .header-title {
+    font-size: 4rem;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .header-picture {
+    width: 50%;
+    left: auto;
+  }
+}
+@media screen and (max-width: 740px) {
+  .featuredInfo p {
+    content: "";
+    opacity: 0;
+    height: fit-content;
+  }
+  .featuredInfo h2 {
+    content: "";
+    opacity: 0;
+    height: fit-content;
+  }
+  .featuredInfo {
+    height: fit-content;
+  }
+}

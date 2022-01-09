@@ -25,11 +25,9 @@ const IndexPage = ({
       <div className={header}>
         <div className={headerInfo}>
           <h1 className={headerTitle}>{scooterImageAlt}</h1>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: homePageFields.shortDescription,
-            }}
-          />
+          <div>
+            <p>{homePageFields.shortDescription}</p>
+          </div>
         </div>
         <div>
           <GatsbyImage
@@ -90,7 +88,6 @@ export const query = graphql`
                     }
                   }
                 }
-                description
               }
               slug
             }
