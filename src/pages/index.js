@@ -1,42 +1,22 @@
 import * as React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Scooter from "../components/scooter"
 import {
-  header,
-  headerInfo,
-  headerPicture,
-  headerTitle,
   scooterscontent,
   scooters,
   featuredInfo,
 } from "../components/page.module.css"
+import Header from "../components/homepageheader"
 const IndexPage = ({
   data: {
     wpPage: { homePageFields },
   },
 }) => {
-  const scooterImage = getImage(homePageFields.bannerImage.localFile)
-  const scooterImageAlt = homePageFields.bannerImage.altText
   const featuredscooters = homePageFields.featuredVespa
   return (
     <Layout>
-      <div className={header}>
-        <div className={headerInfo}>
-          <h1 className={headerTitle}>{scooterImageAlt}</h1>
-          <div>
-            <p>{homePageFields.shortDescription}</p>
-          </div>
-        </div>
-        <div>
-          <GatsbyImage
-            className={headerPicture}
-            image={scooterImage}
-            alt={homePageFields.bannerImage.altText}
-          />
-        </div>
-      </div>
+      <Header homePageFields={homePageFields}></Header>
       <div className={scooterscontent}>
         <div className={featuredInfo}>
           <h2>{featuredscooters.title}</h2>

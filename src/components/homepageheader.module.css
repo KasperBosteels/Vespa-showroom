@@ -1,0 +1,26 @@
+.wrapper {
+  position: relative;
+  width: 1000px;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.content {
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 100%;
+}
+.Picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.Title {
+  font-size: 6rem;
+  line-height: 5rem;
+  letter-spacing: -0.2rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+}
